@@ -16,5 +16,7 @@ public class Tester {
     for(int i = 0; i<10; i++) {
       System.out.println(a.get(i));
     }
+    System.out.println(a.set(5,"replaced"));
+    System.out.println(a.get(5));
   }
 }
