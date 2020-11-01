@@ -5,4 +5,7 @@ public class SuperArray {
     size = 0;
     data = new String[10];
   }
+  public int size() {
+    return size;
+  }
 }
