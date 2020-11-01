@@ -13,6 +13,11 @@ public class SuperArray {
       data[size] = element;
       size +=1;
     }
+    else {
+      resize();
+      data[data.length-1] = element;
+      size +=1;
+    }
     return true;
   }
   public String get(int index) {
@@ -22,5 +27,12 @@ public class SuperArray {
     String old = data[index];
     data[index] = element;
     return old;
+  }
+  private void resize() {
+    String[] newArray = new String[data.length+1];
+    for(int i = 0; i<size; i++) {
+      newArray[i] = data[i];
+    }
+    data = newArray;
   }
 }
