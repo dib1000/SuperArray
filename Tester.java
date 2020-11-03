@@ -30,9 +30,10 @@ public class Tester {
   System.out.println(a.get(4));
   System.out.println(a.contains("replaced"));
   System.out.println(a);
+  a.clear();
+  System.out.println(a.isEmpty());
 
   System.out.println();
   SuperArray b = new SuperArray(1000);
-  System.out.println(b);
   }
 }
