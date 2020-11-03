@@ -35,5 +35,11 @@ public class Tester {
 
   System.out.println();
   SuperArray b = new SuperArray(1000);
+  for(int i = 0; i<4; i++) {
+    b.add("hi");
+    }
+  b.add(2,"wow");
+  System.out.println(b);
+  System.out.println(b.size());
   }
 }
