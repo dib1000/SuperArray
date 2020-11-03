@@ -35,4 +35,7 @@ public class SuperArray {
     }
     data = newArray;
   }
+  public boolean isEmpty() {
+    return size==0;
+  }
 }
