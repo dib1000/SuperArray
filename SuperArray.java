@@ -45,4 +45,13 @@ public class SuperArray {
     }
     return strArray + "]";
   }
+  public boolean contains(String s) {
+    for(int i = 0; i<size; i++) {
+      String get = data[i];
+      if(s.equals(get)) {
+        return true;
+      }
+    }
+    return false;
+  }
 }

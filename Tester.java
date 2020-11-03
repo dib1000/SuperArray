@@ -1,6 +1,7 @@
 public class Tester {
   public static void main(String[] args) {
   SuperArray a = new SuperArray();
+  System.out.println(a);
   System.out.println(a.size());
   System.out.println(a.isEmpty());
   System.out.println();
@@ -19,6 +20,7 @@ public class Tester {
     }
   }
   System.out.println(a.isEmpty());
+  System.out.println(a.contains("replaced"));
   System.out.println();
   for(int i = 0; i<=15; i++) {
     System.out.println(a.get(i));
@@ -26,6 +28,7 @@ public class Tester {
   System.out.println();
   System.out.println(a.set(4,"replaced"));
   System.out.println(a.get(4));
+  System.out.println(a.contains("replaced"));
   System.out.println(a);
   }
 }
