@@ -29,7 +29,7 @@ public class SuperArray {
     return old;
   }
   private void resize() {
-    String[] newArray = new String[data.length+10];
+    String[] newArray = new String[data.length*2];
     for(int i = 0; i<size; i++) {
       newArray[i] = data[i];
     }
