@@ -26,5 +26,6 @@ public class Tester {
   System.out.println();
   System.out.println(a.set(4,"replaced"));
   System.out.println(a.get(4));
+  System.out.println(a);
   }
 }

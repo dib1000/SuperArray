@@ -29,7 +29,7 @@ public class SuperArray {
     return old;
   }
   private void resize() {
-    String[] newArray = new String[data.length+1];
+    String[] newArray = new String[data.length+10];
     for(int i = 0; i<size; i++) {
       newArray[i] = data[i];
     }
@@ -37,5 +37,12 @@ public class SuperArray {
   }
   public boolean isEmpty() {
     return size==0;
+  }
+  public String toString() {
+    String strArray = "["+data[0];
+    for(int i = 1; i<size; i++) {
+      strArray = strArray + ", " + data[i];
+    }
+    return strArray + "]";
   }
 }
