@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class Tester {
   public static void main(String[] args) {
   SuperArray a = new SuperArray();
@@ -47,5 +48,9 @@ public class Tester {
   System.out.println(b.remove(2));
   System.out.println(b);
   System.out.println(b.size());
+
+  System.out.println();
+  String[] c = b.toArray();
+  System.out.println(Arrays.toString(c));
   }
 }

@@ -85,4 +85,11 @@ public class SuperArray {
     }
     return -1;
   }
+  public String[] toArray() {
+    String[] regular = new String[size];
+    for(int i = 0; i<size; i++) {
+      regular[i] = data[i];
+    }
+    return regular;
+  }
 }
