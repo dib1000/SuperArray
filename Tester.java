@@ -6,7 +6,7 @@ public class Tester {
   System.out.println(a.size());
   System.out.println(a.isEmpty());
   System.out.println();
-  for(int i = 0; i<=15; i++) {
+  for(int i = 0; i<=32; i++) {
     if(i==15) {
       a.add("wow");
       System.out.println(a.size());

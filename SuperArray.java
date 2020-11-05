@@ -33,7 +33,8 @@ public class SuperArray {
     return old;
   }
   private void resize() {
-    String[] newArray = new String[data.length*2];
+    int x = data.length;
+    String[] newArray = new String[x*2];
     for(int i = 0; i<size; i++) {
       newArray[i] = data[i];
     }
@@ -79,7 +80,7 @@ public class SuperArray {
   }
   public int indexOf(String s) {
     for(int i = 0; i<size; i++) {
-      if(s.equals(data[i])) {
+      if(data[i].equals(s)) {
         return i;
       }
     }
