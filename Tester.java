@@ -6,7 +6,7 @@ public class Tester {
   System.out.println(a.size());
   System.out.println(a.isEmpty());
   System.out.println();
-  for(int i = 0; i<=32; i++) {
+  for(int i = 0; i<=15; i++) {
     if(i==15) {
       a.add("wow");
       System.out.println(a.size());
@@ -48,6 +48,10 @@ public class Tester {
   System.out.println(b.remove(2));
   System.out.println(b);
   System.out.println(b.size());
+  for(int i = b.size()-1; i >= 0; i--){
+    b.remove(i);
+}
+  System.out.println(b);
 
   System.out.println();
   String[] c = b.toArray();

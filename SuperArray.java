@@ -18,8 +18,9 @@ public class SuperArray {
       size +=1;
     }
     else {
+      int oldLength = data.length;
       resize();
-      data[data.length-1] = element;
+      data[oldLength] = element;
       size +=1;
     }
     return true;
@@ -44,6 +45,9 @@ public class SuperArray {
     return size==0;
   }
   public String toString() {
+    if (size==0) {
+      return "[]";
+    }
     String strArray = "["+data[0];
     for(int i = 1; i<size; i++) {
       strArray = strArray + ", " + data[i];
@@ -52,7 +56,7 @@ public class SuperArray {
   }
   public boolean contains(String s) {
     for(int i = 0; i<size; i++) {
-      if(s.equals(data[i])) {
+      if(data[i].equals(s)) {
         return true;
       }
     }
@@ -64,7 +68,7 @@ public class SuperArray {
   }
   public void add(int index, String element) {
     size +=1;
-    for(int i = index; i<size-1; i++) {
+    for(int i = size-2; i>=index; i--) {
       data[i+1] = data[i];
     }
     data[index] = element;
