@@ -41,6 +41,9 @@ public class Tester {
   b.add(2,"wow");
   System.out.println(b);
   System.out.println(b.size());
+  System.out.println(b.indexOf("hi"));
+  System.out.println(b.indexOf("wow"));
+  System.out.println(b.indexOf("bye"));
   System.out.println(b.remove(2));
   System.out.println(b);
   System.out.println(b.size());

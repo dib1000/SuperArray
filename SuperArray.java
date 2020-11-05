@@ -77,4 +77,12 @@ public class SuperArray {
     data[size] = null;
     return storage;
   }
+  public int indexOf(String s) {
+    for(int i = 0; i<size; i++) {
+      if(s.equals(data[i])) {
+        return i;
+      }
+    }
+    return -1;
+  }
 }
