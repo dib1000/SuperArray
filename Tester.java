@@ -39,10 +39,19 @@ public class Tester {
   for(int i = 0; i<4; i++) {
     b.add("hi");
     }
+  SuperArray comp = new SuperArray();
+  for(int i = 0; i<4; i++) {
+    comp.add("hi");
+    }
+  System.out.println(b.equals(comp));
+  comp.set(2,"dif");
+  System.out.println(comp.equals(b));
   b.add(2,"wow");
   b.add("jesus");
   b.add(0,"well");
   System.out.println(b);
+  System.out.println(b.equals(comp));
+  System.out.println(comp.equals(b));
   System.out.println(b.size());
   System.out.println(b.indexOf("hi"));
   System.out.println(b.indexOf("wow"));
