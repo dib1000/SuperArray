@@ -40,19 +40,19 @@ public class Tester {
     b.add("hi");
     }
   b.add(2,"wow");
+  b.add("jesus");
+  b.add(0,"well");
   System.out.println(b);
   System.out.println(b.size());
   System.out.println(b.indexOf("hi"));
   System.out.println(b.indexOf("wow"));
   System.out.println(b.indexOf("bye"));
+  System.out.println(b.lastIndexOf("hi"));
+  System.out.println(b.lastIndexOf("wow"));
+  System.out.println(b.lastIndexOf("bye"));
   System.out.println(b.remove(2));
   System.out.println(b);
   System.out.println(b.size());
-  for(int i = b.size()-1; i >= 0; i--){
-    b.remove(i);
-}
-  System.out.println(b);
-
   System.out.println();
   String[] c = b.toArray();
   System.out.println(Arrays.toString(c));
