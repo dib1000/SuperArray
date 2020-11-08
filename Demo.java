@@ -24,6 +24,27 @@ public class Demo{
     removeDuplicates(overlap);
     return overlap;
   }
+  public static SuperArray zip(SuperArray a, SuperArray b) {
+    int small = 0;
+    SuperArray longer = new SuperArray();
+    if(a.size()<=b.size()) {
+      small = a.size();
+      longer = b;
+    }
+    else {
+      small = b.size();
+      longer = a;
+    }
+    SuperArray zipped = new SuperArray();
+    for(int i = 0; i<small; i++) {
+      zipped.add(a.get(i));
+      zipped.add(b.get(i));
+    }
+    for(int j = small; j<longer.size(); j++) {
+      zipped.add(longer.get(j));
+    }
+    return zipped;
+  }
   public static void main(String[]args){
     SuperArray words = new SuperArray();
     //grouped to save vertical space
@@ -41,5 +62,15 @@ public class Demo{
     nums.add("9"); nums.add("1"); nums.add("2"); nums.add("2"); nums.add("3"); nums.add("4");
     numz.add("0"); numz.add("4"); numz.add("2"); numz.add("2"); numz.add("9");
     System.out.println(findOverlap(nums,numz));
+
+    System.out.println();
+    SuperArray letters = new SuperArray();
+    SuperArray numbers = new SuperArray();
+    letters.add("a"); letters.add("b"); letters.add("c"); letters.add("d"); letters.add("e"); letters.add("f");
+    numbers.add("0"); numbers.add("1"); numbers.add("2"); numbers.add("3");
+    System.out.println(zip(letters,numbers));
+    letters.remove(5); letters.remove(4); letters.remove(3);
+    numbers.add("4");
+    System.out.println(zip(letters,numbers));
   }
 }
