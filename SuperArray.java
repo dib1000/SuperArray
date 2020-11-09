@@ -6,6 +6,9 @@ public class SuperArray {
     data = new String[10];
   }
   public SuperArray(int InitialCapacity) {
+    if(InitialCapacity<0) {
+      throw new IllegalArgumentException("Capacity " + InitialCapacity + " has to be >= 0");
+    }
     size = 0;
     data = new String[InitialCapacity];
   }
