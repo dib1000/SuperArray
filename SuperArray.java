@@ -86,6 +86,9 @@ public class SuperArray {
     data[index] = element;
   }
   public String remove(int index) {
+    if(index<0 || index>=size) {
+      throw new IndexOutOfBoundsException("Index "+index+" should be in the range [0,size)");
+    }
     String storage = data[index];
     size -= 1;
     for(int i = index+1; i<=size; i++) {

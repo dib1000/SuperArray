@@ -18,7 +18,13 @@ public class ErrorTest {
       e.printStackTrace();
     }
     try {
-      test.get(10);
+      test.get(5);
+    }
+    catch(IndexOutOfBoundsException e){
+      e.printStackTrace();
+    }
+    try {
+      System.out.println(test.get(4));
     }
     catch(IndexOutOfBoundsException e){
       e.printStackTrace();
@@ -30,7 +36,13 @@ public class ErrorTest {
       e.printStackTrace();
     }
     try {
-      test.set(10, "no");
+      test.set(5, "no");
+    }
+    catch(IndexOutOfBoundsException e){
+      e.printStackTrace();
+    }
+    try {
+      System.out.println(test.set(4,"no"));
     }
     catch(IndexOutOfBoundsException e){
       e.printStackTrace();
@@ -43,6 +55,32 @@ public class ErrorTest {
     }
     try {
       test.add(10, "no");
+    }
+    catch(IndexOutOfBoundsException e){
+      e.printStackTrace();
+    }
+    try {
+      test.add(5, "no"); //should not give error
+      System.out.println(test);
+    }
+    catch(IndexOutOfBoundsException e){
+      e.printStackTrace();
+    }
+    try {
+      test.remove(-1);
+    }
+    catch(IndexOutOfBoundsException e) {
+      e.printStackTrace();
+    }
+    try {
+      test.remove(6);
+    }
+    catch(IndexOutOfBoundsException e){
+      e.printStackTrace();
+    }
+    try {
+      test.remove(5);
+      System.out.println(test);
     }
     catch(IndexOutOfBoundsException e){
       e.printStackTrace();
