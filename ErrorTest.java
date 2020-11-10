@@ -6,5 +6,22 @@ public class ErrorTest {
     catch(IllegalArgumentException e) {
       e.printStackTrace();
     }
+
+    SuperArray test = new SuperArray();
+    for(int i = 0; i<5; i++) {
+      test.add("hi");
+    }
+    try {
+      test.get(-1);
+    }
+    catch(IndexOutOfBoundsException e) {
+      e.printStackTrace();
+    }
+    try {
+      test.get(10);
+    }
+    catch(IndexOutOfBoundsException e){
+      e.printStackTrace();
+    }
   }
 }

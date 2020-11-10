@@ -29,6 +29,9 @@ public class SuperArray {
     return true;
   }
   public String get(int index) {
+    if(index<0 || index>=size) {
+      throw new IndexOutOfBoundsException("Index "+index+" should be in the range [0,size)");
+    }
     return data[index];
   }
   public String set(int index, String element) {
