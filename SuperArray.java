@@ -76,6 +76,9 @@ public class SuperArray {
     size = 0;
   }
   public void add(int index, String element) {
+    if(index<0 || index>size) {
+      throw new IndexOutOfBoundsException("Index "+index+" should be in the range [0,size]");
+    }
     size +=1;
     for(int i = size-2; i>=index; i--) {
       data[i+1] = data[i];
