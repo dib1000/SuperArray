@@ -23,5 +23,17 @@ public class ErrorTest {
     catch(IndexOutOfBoundsException e){
       e.printStackTrace();
     }
+    try {
+      test.set(-1, "no");
+    }
+    catch(IndexOutOfBoundsException e) {
+      e.printStackTrace();
+    }
+    try {
+      test.set(10, "no");
+    }
+    catch(IndexOutOfBoundsException e){
+      e.printStackTrace();
+    }
   }
 }
